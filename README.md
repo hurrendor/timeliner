@@ -1,4 +1,5 @@
 #TimeLiner
+
 ##Plugin to create Timelines via the click of a button
 Work in progress, this will be a plugin that creates multiple vertical timelines utilizing the React framework and writing to a JSON based database, using Grunt as a task runner.
 
@@ -20,11 +21,14 @@ Work in progress, this will be a plugin that creates multiple vertical timelines
 4. Implement additional functionality
 
 ###Minimum Functionalities
+
 ####Phase One
-  1. Create a timeline
-  2. Add an event to a timeline
+  + Ability - Create a timeline
+  + Ability - Add an event to a timeline
+
 ####Phase Two
-  1. Edit timeline
-  2. Edit event in timeline
+  + Ability - Edit timeline
+  + Ability - Edit event in timeline
+
 ####Potential Future Functionalities
-  1. Save timelines under a profile
+  + Ability - Save timelines under a profile
