@@ -9,7 +9,7 @@
         <title>Timeliner</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-theme.css">
         <link rel="stylesheet" href="css/main.css">
@@ -17,27 +17,31 @@
     </head>
     <body>
       <main class="container-fluid">
+
+        <h1>Timeline - History of Rock</h1>
+
         <nav>
-          <button class="btn btn-default">Create Timeline</button>
-          <button class="btn btn-default" disabled>Add Timeline Event</button>
+          <button id="create-timeline" class="btn btn-primary btn-default">Create Timeline</button>
+          <button id="create-timeline-event" class="btn btn-primary btn-default">Add Timeline Event</button>
         </nav>
-        <h2>Timeline - History of Rock</h2>
-        <div class="col-sm-6">
+
+        <div class="col-xs-10 timeline">
             <article class="timeline-event">
-              <img src="img/Alan-Freed.jpg" alt="This is the Moment Image">
+              <img src="img/Alan-Freed.jpg" alt="This is the Moment Image" class="img-rounded">
               <h2>DJ Alan Freed</h2>
-              <h3>1953(?)</h3>
+              <h3>1953</h3>
               <p>Disc Jockey Alan Freed spins up-tempo rythym &amp; blues hits and dubs it "Rock and Roll"</p>
             </article>
-        </div>
-        <div class="col-sm-6">
+
           <article class="timeline-event">
-            <img src="img/Bill-Haley-and-His-Comets.jpg" alt="Bill Haley and His Comets">
+            <img src="img/Bill-Haley-and-His-Comets.jpg" alt="Bill Haley and His Comets" class="img-rounded">
             <h2>"Crazy Man Crazy" On the Charts</h2>
-            <h3>1953</h3>
+            <h3>1955</h3>
             <p>Bill Haley and His Comets hit the charts with the first true rock and roll song - "Crazy Man Crazy"</p>
           </article>
 
+        </div>
+        <div class="col-xs-2 years">
           <nav><!--This will show on the side-->
             <!--Any link in here is connected to a main year-->
             <a href="">1900</a>
@@ -53,19 +57,33 @@
         </div>
       </main>
 
-      <div class="container new-item-popup">
-        <h2>This Screen Will Appear in Front of Others</h2>
-        <button class="btn btn-default">Create New Timeline</button>
-        <button class="btn btn-default">Create New Moment</button>
+      <div class="container new-timeline-popup">
+        <h2>Create a Timeline</h2>
+        <form>
+          <label for="">Name of timeline
+          <input type="text">
+          <input type="submit" value="Create Timeline" class="btn btn-submit">
+        </form>
+      </div>
+
+      <div class="container new-event-popup">
+        <h2>Create a Timeline Event</h2>
+        <form>
+          <label for="">Event Image
+          <input type="file">
+          <label for="">Title of Event
+          <input type="text">
+          <label for="">Year of Event
+          <input type="text">
+          <label for="">Description of Event
+          <input type="text">
+          <input type="submit" value="Create Timeline Event" class="btn btn-submit">
+        </form>
       </div>
 
       <footer class="clearfix">
         <p>Lovingly coded by &copy; Stacy Davis 2016</p>
       </footer>
-
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-      <script src="js/vendor/bootstrap.min.js"></script>
-      <script src="js/main.js"></script>
+      <script src="main.js"></script>
     </body>
 </html>
