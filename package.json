@@ -1,10 +1,38 @@
 {
   "name": "timeliner",
-  "version": "0.0.2",
+  "version": "1.0.0",
+  "description": "Work in progress, this will be a plugin that creates multiple vertical timelines utilizing the React framework and writing to a JSON based database, using Grunt as a task runner.",
+  "main": "index.js",
+  "standard": {
+    "ignore": [
+      "/scripts/",
+      "/public/"
+    ]
+  },
+  "scripts": {
+    "lint": "standard"
+  },
+  "build": "webpack js/Timelineframe public/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hurrendor/timeliner.git"
+  },
+  "author": "hurrendor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hurrendor/timeliner/issues"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "babel-core": "^6.18.2",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "standard": "^8.6.0",
+    "webpack": "^2.2.0-rc.1",
+    "webpack-validator": "^2.3.0"
   }
 }

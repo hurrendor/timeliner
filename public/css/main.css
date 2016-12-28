@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/**Reset Additions**/
+img {
+  max-width: 100%; }
+
+.clearfix {
+  float: none;
+  clear: both; }
+
+/*sets up first half of screen*/
+* {
+  font-family: 'Merriweather', serif; }
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif; }
+
+h2,
+h3 {
+  margin-top: 0.125em; }
+
+main {
+  height: 100vh; }
+  main > nav {
+    display: flex;
+    justify-content: center; }
+  main .timeline-nav {
+    margin: 1em auto; }
+    main .timeline-nav button {
+      margin: 0 1em;
+      padding: 1em; }
+  main .timeline {
+    /**set up for an individual event, when not in focus**/ }
+
+.timeline-event {
+  display: block;
+  clear: both;
+  width: 50%;
+  border-top: 1px solid black; }
+  .timeline-event article {
+    /*display:none;*/
+    position: relative;
+    max-width: 90%;
+    padding: 1%;
+    margin: 0 auto; }
+  .timeline-event img {
+    display: block;
+    max-width: 30%;
+    float: left; }
+  .timeline-event p {
+    /**hides description**/
+    position: absolute;
+    display: none; }
+  .timeline-event:hover p {
+    display: block;
+    /*this is being compiled*/ }
+
+.timeline-event:nth-of-type(odd) {
+  float: left;
+  border-right: 1px solid black; }
+  .timeline-event:nth-of-type(odd) article,
+  .timeline-event:nth-of-type(odd) img,
+  .timeline-event:nth-of-type(odd) p {
+    float: left; }
+  .timeline-event:nth-of-type(odd) img {
+    margin-right: 0.5em; }
+  .timeline-event:nth-of-type(odd) p {
+    left: 33%; }
+
+.timeline-event:nth-of-type(even) {
+  float: right;
+  border-left: 1px solid black; }
+  .timeline-event:nth-of-type(even) article,
+  .timeline-event:nth-of-type(even) img,
+  .timeline-event:nth-of-type(even) p {
+    float: right; }
+  .timeline-event:nth-of-type(even) img {
+    margin-left: 0.5em; }
+  .timeline-event:nth-of-type(even) p {
+    right: 33%; }
+
+.years {
+  position: fixed;
+  background-color: #9f9f9f;
+  height: 100%;
+  right: 0;
+  top: 0; }
+  .years .years-nav {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start; }
+  .years a {
+    display: block;
+    font-weight: 700;
+    color: white;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg); }
+
+/**container for when btn.new timeline or event is clicked**/
+.new-timeline-popup,
+.new-event-popup {
+  /*display:block;*/
+  display: none;
+  position: fixed;
+  top: 20%;
+  padding: 1em;
+  max-width: 450px;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 10px;
+  -webkit-border-radius: 10px; }
+
+/**FORMS**/
+form label,
+form input {
+  display: block; }
+form input {
+  width: 100%;
+  line-height: 1.5em;
+  padding: 0.5em; }
+form input[type=submit] {
+  margin: 0 auto; }
+
+/******
+FOOTER
+*****/
+footer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid gray; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,49 +1,59 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Timeliner</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-      <main class="container-fluid">
+      <main class="container-fluid" id="container">
 
-        <h1>Timeline - History of Rock</h1>
+        <!-- <nav class="timeline-nav">
+          <button id="create-timeline-button" class="btn btn-primary btn-default">Create Timeline</button>
+          <button id="create-event-button" class="btn btn-primary btn-default">Add Timeline Event</button>
+        </nav> -->
 
-        <nav>
-          <button id="create-timeline" class="btn btn-primary btn-default">Create Timeline</button>
-          <button id="create-timeline-event" class="btn btn-primary btn-default">Add Timeline Event</button>
-        </nav>
+        <!-- <div class="col-xs-10 col-sm-11 timeline active-timeline">
 
-        <div class="col-xs-10 timeline">
-            <article class="timeline-event">
+          <div class="timeline-event">
+            <article class="">
               <img src="img/Alan-Freed.jpg" alt="This is the Moment Image" class="img-rounded">
-              <h2>DJ Alan Freed</h2>
-              <h3>1953</h3>
+              <h2>1953</h2>
+              <h3>DJ Alan Freed</h3>
               <p>Disc Jockey Alan Freed spins up-tempo rythym &amp; blues hits and dubs it "Rock and Roll"</p>
             </article>
+          </div>
 
-          <article class="timeline-event">
-            <img src="img/Bill-Haley-and-His-Comets.jpg" alt="Bill Haley and His Comets" class="img-rounded">
-            <h2>"Crazy Man Crazy" On the Charts</h2>
-            <h3>1955</h3>
-            <p>Bill Haley and His Comets hit the charts with the first true rock and roll song - "Crazy Man Crazy"</p>
-          </article>
+          <div class="timeline-event">
+            <article class="">
+              <img src="img/Bill-Haley-and-His-Comets.jpg" alt="Bill Haley and His Comets" class="img-rounded">
+              <h2>1955</h2>
+              <h3>"Crazy Man Crazy" On the Charts</h3>
+              <p>Bill Haley and His Comets hit the charts with the first true rock and roll song - "Crazy Man Crazy"</p>
+            </article>
+          </div>
+
+          <div class="container new-timeline-popup">
+            <h2>Create a Timeline</h2>
+            <form>
+              <label for="timelineName">Name of timeline
+              <input type="text" name="timelineName" id="timelineName">
+              <input type="submit" value="Create Timeline" class="btn btn-submit">
+            </form>
+          </div>
 
         </div>
-        <div class="col-xs-2 years">
-          <nav><!--This will show on the side-->
-            <!--Any link in here is connected to a main year-->
+
+
+        <div class="col-xs-2 col-sm-1 years">
+          <nav class="years-nav"><!--This will show on the side-->
+            <!--Any link in here is connected to a main year
             <a href="">1900</a>
             <a href="">1910</a>
             <a href="">1920</a>
@@ -59,31 +69,47 @@
 
       <div class="container new-timeline-popup">
         <h2>Create a Timeline</h2>
-        <form>
-          <label for="">Name of timeline
-          <input type="text">
+        <form id="newTimelineForm">
+          <label for="timelineName">Name of timeline
+          <input type="text" name="timelineName" id="timelineName">
           <input type="submit" value="Create Timeline" class="btn btn-submit">
         </form>
       </div>
 
-      <div class="container new-event-popup">
+      <div id="create-timeline-event" class="container new-event-popup">
         <h2>Create a Timeline Event</h2>
-        <form>
-          <label for="">Event Image
-          <input type="file">
-          <label for="">Title of Event
-          <input type="text">
-          <label for="">Year of Event
-          <input type="text">
-          <label for="">Description of Event
-          <input type="text">
-          <input type="submit" value="Create Timeline Event" class="btn btn-submit">
+        <form id="newTimelineEvent">
+          <div class="form-group">
+            <label for="eventFile">Event Image
+            <input type="file" id="eventFile" name="eventFile">
+          </div>
+          <div class="form-group">
+            <label for="eventTitle">Title of Event
+            <input type="text" id="eventTitle" name="eventTitle">
+          </div>
+          <div class="form-group">
+            <label for="eventYear">Year of Event
+            <input type="text" id="eventYear" name="eventYear">
+          </div>
+          <div class="form-group">
+            <label for="eventDescript">Description of Event
+            <input type="text" id="eventDescript" name="eventDescript">
+          </div>
+          <input type="submit" value="Create Timeline Event" onSubmit="newEvent()" class="btn btn-submit">
         </form>
-      </div>
+      </div> -->
 
+      <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script> -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script> -->
+      <!-- <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script> -->
+      <!-- <script src="builds/bundle.js"></script> -->
+      <!-- <script src="scripts/vendor/jquery-1.11.2.min.js"></script> -->
+      <!-- <script src="../main.js"></script> -->
+      <!-- <script src="../js/Timelineframe.js"></script> -->
+      <script src="public/bundle.js"></script>
       <footer class="clearfix">
         <p>Lovingly coded by &copy; Stacy Davis 2016</p>
       </footer>
-      <script src="main.js"></script>
     </body>
 </html>
